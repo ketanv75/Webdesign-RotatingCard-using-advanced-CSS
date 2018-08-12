@@ -1,0 +1,133 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* Since we are overriding the default browser font size by hardcoded value, no matter what 
+    default browser font side is updated by user it will always be 10 px. To avoid this we will
+    make it % of default browrer font size which is 16 px*/
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.PageList {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.92), rgba(44, 41, 41, 0.92), rgba(0, 0, 0, 0.92)), url(../../img/MoonLight.JPG);
+  background-size: cover; }
+  @media (max-height: 43.75em) {
+    .PageList {
+      height: 200vh; } }
+  .PageList__heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin: auto;
+    padding-top: 10rem; }
+  .PageList__list {
+    margin: 5rem auto;
+    width: 50rem;
+    height: 50rem;
+    list-style: none;
+    text-align: center; }
+  .PageList__item {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+    padding: 1rem; }
+    .PageList__item-link {
+      text-decoration: none;
+      color: #fff; }
+
+.cardcontainer {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card {
+  background-image: linear-gradient(to right, #101338, #28319e);
+  position: relative;
+  width: 45rem;
+  height: 30rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  box-shadow: 3rem 3rem 5rem rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: animate 15s infinite; }
+  .card-content {
+    color: white;
+    animation: movecontent 15s infinite; }
+
+pre {
+  position: absolute;
+  transform: translateX(-37rem);
+  font-size: 1.8rem;
+  line-height: 1.8; }
+
+.name {
+  text-align: center;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1rem; }
+
+@keyframes movecontent {
+  5% {
+    transform: translateY(-90rem); }
+  20% {
+    transform: translateY(-90rem); }
+  21% {
+    transform: translateY(-40rem); }
+  40% {
+    transform: translateY(-40rem); }
+  41% {
+    transform: translateY(-5rem); }
+  60% {
+    transform: translateY(-5rem); }
+  61% {
+    transform: translateY(-30rem); }
+  80% {
+    transform: translateY(-30rem); }
+  81% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes animate {
+  20% {
+    transform: rotateY(15deg); }
+  40% {
+    transform: rotateY(-20deg) rotateX(15deg); }
+  60% {
+    transform: rotateY(-15deg) rotateX(-20deg); }
+  80% {
+    transform: rotateY(20deg) rotateX(-15deg); }
+  100% {
+    transform: rotateY(0) rotateX(0); } }
+
+.hide_me {
+  display: none; }
+
+.margin_bottom_mid {
+  margin-bottom: 1rem; }
+
+.margin_bottom_small {
+  margin-bottom: .5rem; }
+
+.center_align {
+  text-align: center; }

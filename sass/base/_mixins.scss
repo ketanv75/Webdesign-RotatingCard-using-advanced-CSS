@@ -1,0 +1,21 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == mobile {
+        @media (max-width: 56.25em) {@content}; //900px = 900/16 = 56.25 em
+    }
+
+    @if $breakpoint == mobile_h {
+        @media (max-height: 43.75em) {@content}; //700px = 700/16 = 43.75 em
+    }
+
+    @if $breakpoint == mobile_hs {
+        @media (max-height: 37.5em) {@content}; //600 = 600/16 = 37.5 em
+    }
+}

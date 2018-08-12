@@ -1,0 +1,49 @@
+
+.PageList {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    @include respond(mobile_h) {
+        height: 200vh;
+    }
+
+    background-image: linear-gradient( to right, 
+            rgba($color-black, 0.92),
+            rgba($color-gray-dark, 0.92),
+            rgba($color-black, 0.92)),
+            url(../../img/MoonLight.JPG);
+            
+    background-size: cover;
+
+    &__heading {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        color: white;
+        margin: auto;
+        padding-top: 10rem;
+    }
+
+    &__list {
+        margin: 5rem auto;
+        width: 50rem;
+        height: 50rem;
+
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 1;
+        padding: 1rem;
+
+        &-link {
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+}

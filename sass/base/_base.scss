@@ -1,0 +1,23 @@
+//initialize the page
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    //text-decoration: none;
+}
+
+html {
+    /* Since we are overriding the default browser font size by hardcoded value, no matter what 
+    default browser font side is updated by user it will always be 10 px. To avoid this we will
+    make it % of default browrer font size which is 16 px*/
+    font-size: 62.5%;   // 1rem = 10px.  10/16 = 62.5 %
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
